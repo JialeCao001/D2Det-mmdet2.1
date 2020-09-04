@@ -1,6 +1,6 @@
 # D2Det-mmdet2.1
 
-- The project adopts mmdetection v2.1.0 to re-implement the original [D2Det](https://github.com/JialeCao001/D2Det-mmdet2.1) based on mmdetection v2.1.0.
+- The project adopts mmdetection v2.1.0 to re-implement the original [D2Det](https://github.com/JialeCao001/D2Det-mmdet2.1).
 - The config files for large vocabulary datasets LVIS and Objects365 are also provided.
 
 <table>
