@@ -200,7 +200,12 @@ class BaseDetector(nn.Module, metaclass=ABCMeta):
         labels = np.concatenate(labels)
         # draw segmentation masks
         if segm_result is not None and len(labels) > 0:  # non empty
-            segms = mmcv.concat_list(segm_result)
+            # segms = mmcv.concat_list(segm_result[0])
+            if len(segm_result) > 1:
+                segms = mmcv.concat_list(segm_result[0])
+                bboxes[:, -1] = np.concatenate(segm_result[1]) / 1.3  # rescale the mask scores to the range of [0,1]
+            else:
+                segms = mmcv.concat_list(segm_result)
             inds = np.where(bboxes[:, -1] > score_thr)[0]
             np.random.seed(42)
             color_masks = [

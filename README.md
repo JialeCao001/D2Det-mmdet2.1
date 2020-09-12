@@ -47,6 +47,17 @@ python tools/test.py ${CONFIG_FILE} ${CHECKPOINT_FILE} [--out ${RESULT_FILE}] [-
 
 - CONFIG_FILE about D2Det is in [configs/d2det](configs/d2det), please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) for more details.
 
+
+## Demo
+
+
+With your trained model, detection results of an image can be visualized using the following command.
+```shell
+python ./demo/D2Det_demo.py ${CONFIG_FILE} ${CHECKPOINT_FILE} ${IMAGE_FILE} [--out ${OUT_PATH}]
+e.g.,
+python ./demo/D2Det_demo.py ./configs/D2Det/D2Det_instance_r101_fpn_2x.py ./D2Det-instance-res101.pth ./demo/demo.jpg --out ./demo/aa.jpg
+```
+
 ## Citation
 If the project helps your research, please cite this paper.
 
