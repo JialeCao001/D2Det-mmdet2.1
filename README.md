@@ -55,7 +55,7 @@ With your trained model, detection results of an image can be visualized using t
 ```shell
 python ./demo/D2Det_demo.py ${CONFIG_FILE} ${CHECKPOINT_FILE} ${IMAGE_FILE} [--out ${OUT_PATH}]
 e.g.,
-python ./demo/D2Det_demo.py ./configs/D2Det/D2Det_instance_r101_fpn_2x.py ./D2Det-instance-res101.pth ./demo/demo.jpg --out ./demo/aa.jpg
+python ./demo/D2Det_demo.py ./configs/d2det/D2Det_instance_r50_fpn_lvis.py ./D2Det_instance_r50_fpn_lvis.pth ./demo/demo.jpg --out ./demo/lvis.jpg
 ```
 
 ## Citation

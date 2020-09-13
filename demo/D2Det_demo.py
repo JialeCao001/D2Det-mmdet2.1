@@ -23,7 +23,7 @@ def main():
     # test a single image
     result = inference_detector(model, args.img_file)
     # show the results
-    show_result_pyplot(args.img_file, result, model.CLASSES, out_file=args.out)
+    show_result_pyplot(model, args.img_file, result, out_file=args.out)
 
 
 if __name__ == '__main__':
